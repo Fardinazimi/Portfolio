@@ -62,3 +62,40 @@ li a {
 #element {
   color: blueviolet;
 }
+
+/*  second section */
+
+.secondSection {
+  font-size: 1.9rem;
+  height: 80vh;
+}
+
+.text-gray {
+  color: gray;
+  margin-left: 200px;
+  /* font-weight: bold; */
+}
+.secondSection h1 {
+  margin-left: 200px;
+}
+
+hr {
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 50px;
+}
+.secondSection .box {
+  background: white;
+  width: 80vw;
+  height: 2px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+}
+
+.secondSection .vertical {
+  height: 93px;
+  width: 1px;
+  background-color: white;
+  margin: 0 100px;
+}
