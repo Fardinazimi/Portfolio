@@ -16,6 +16,16 @@
     font-size: 40px;
     margin: 30px;
   }
+  /* card 3D */
+  .card {
+    width: 200px;
+    height: 300px;
+    background-color: #24245a;
+    margin: auto;
+    position: relative;
+    animation: roteteCard 10s infinite linear;
+    transform-style: preserve-3d;
+  }
 }
 
 /* Medium screens (769px to 1024px) */
@@ -38,6 +48,23 @@
   .leftSection {
     font-size: 21px;
     margin: 70px 17px;
+  }
+  /* card 3D */
+
+  .card {
+    width: 200px;
+    height: 300px;
+    background-color: #24245a;
+    margin: auto;
+    position: relative;
+    animation: roteteCard 10s infinite linear;
+    transform-style: preserve-3d;
+  }
+  .inner_1 {
+    transform: translateZ(20px) rotateY(180deg);
+  }
+  .inner_2 {
+    transform: translateZ(-20px) rotateY(180deg);
   }
 }
 
@@ -73,6 +100,22 @@
   .leftSection {
     font-size: 21px;
     margin: 70px 17px;
+  }
+  /* card 3D */
+  .card {
+    width: 160px;
+    height: 250px;
+    background-color: #24245a;
+    margin: auto;
+    position: relative;
+    animation: roteteCard 10s infinite linear;
+    transform-style: preserve-3d;
+  }
+  .inner_1 {
+    transform: translateZ(15px) rotateY(180deg);
+  }
+  .inner_2 {
+    transform: translateZ(-15px) rotateY(180deg);
   }
 }
 
@@ -117,5 +160,24 @@
   .leftSection {
     font-size: 12px;
     margin: 10px;
+  }
+  /* card 3D */
+  .card {
+    width: 70px;
+    height: 100px;
+    background-color: #24245a;
+    margin: auto;
+    position: relative;
+    animation: roteteCard 10s infinite linear;
+    transform-style: preserve-3d;
+  }
+  .inner {
+    border: 2px solid white;
+  }
+  .inner_1 {
+    transform: translateZ(10px) rotateY(180deg);
+  }
+  .inner_2 {
+    transform: translateZ(-10px) rotateY(180deg);
   }
 }
