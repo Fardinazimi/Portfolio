@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Ensures padding and borders don't affect element sizes */
+}
+
+body {
+  background-color: rgb(0, 0, 33);
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+nav {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  background-color: rgb(18, 18, 62);
+
+  padding: 0 20px; /* Adds padding for spacing on smaller screens */
+  position: fixed;
+  top: 0px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 15px; /* Reduced margin for flexibility */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+}
+
+nav ul li a:hover {
+  color: rgb(32, 71, 190);
+}
+
+.left {
+  font-size: 2rem;
+}
+
+.firstSection {
+  max-width: 80%;
+  display: flex;
+  /* flex-wrap: wrap; Allows wrapping on smaller screens */
+  justify-content: space-between;
+
+  font-size: 3rem;
+  margin: 110px auto;
+
+  /* border: 1px solid white; */
+}
+
+.firstSection > div {
+  width: 100%; /* Full-width on smaller screens */
+  /* border: 1px red; */
+}
+
+.leftSection {
+  font-size: 3rem;
+  margin: 70px 0;
+}
+.rightSection {
+  display: flex;
+  justify-content: center;
+}
+
+.rightSection img {
+  width: 40%; /* Makes image responsive */
+  max-height: 300px; /* Limits height on larger screens */
+  margin: 25px 10px;
+}
+
+.purple,
+#element {
+  color: blueviolet;
+}
+
+/* Second section styling */
+.secondSection {
+  font-size: 1.9rem;
+  padding: 20px; /* Adds padding for better spacing */
+}
+
+.text-gray {
+  color: gray;
+  margin-left: 10%; /* Dynamic margin for better scaling */
+}
+
+.secondSection h1 {
+  margin-left: 10%;
+}
+
+hr {
+  margin: 0 auto;
+  width: 80%; /* Centered and responsive */
+  margin-bottom: 50px;
+}
+
+.secondSection .box {
+  background: white;
+  width: 80%;
+  height: 2px;
+  margin: 100px auto 0;
+}
+
+.secondSection .vertical {
+  height: 93px;
+  width: 1px;
+  background-color: white;
+  margin: 0 30px;
+}
+
+.box {
+  display: flex;
+  justify-content: space-evenly;
+}

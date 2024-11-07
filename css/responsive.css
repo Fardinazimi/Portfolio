@@ -1,0 +1,121 @@
+/* Media Queries */
+
+/* Large screens (1440px and above) */
+@media only screen and (min-width: 1440px) {
+  .right {
+    padding-left: 100px;
+  }
+
+  nav ul li {
+    margin: 0 50px;
+  }
+  .firstSection {
+    margin-top: 100px;
+  }
+  .leftSection {
+    font-size: 40px;
+    margin: 30px;
+  }
+}
+
+/* Medium screens (769px to 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  nav {
+    width: 100%;
+    height: 70px;
+  }
+
+  .firstSection {
+    flex-direction: row;
+  }
+
+  .rightSection img {
+    max-height: 250px;
+  }
+  .firstSection {
+    margin-top: 100px;
+  }
+  .leftSection {
+    font-size: 21px;
+    margin: 70px 17px;
+  }
+}
+
+/* Small screens (427px to 768px) */
+@media only screen and (min-width: 427px) and (max-width: 768px) {
+  nav {
+    width: 100%;
+    height: 60px;
+
+    padding: 0 10px; /* Reduces padding for small screens */
+  }
+
+  .left {
+    font-size: 1.5rem;
+  }
+
+  nav ul li {
+    margin: 0 10px; /* Smaller margins for small screens */
+  }
+
+  .firstSection,
+  .secondSection {
+    font-size: 2rem;
+  }
+
+  .text-gray,
+  .secondSection h1 {
+    margin-left: 5%; /* Reduced margin for small screens */
+  }
+  .firstSection {
+    margin-top: 100px;
+  }
+  .leftSection {
+    font-size: 21px;
+    margin: 70px 17px;
+  }
+}
+
+/* Extra small screens (0px to 426px) */
+@media only screen and (min-width: 0px) and (max-width: 426px) {
+  nav {
+    width: 100%;
+    height: 50px;
+    flex-direction: column; /* Stacks items vertically on small screens */
+    padding: 0 5px;
+  }
+
+  .left {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 5px 0; /* Spacing adjustments for small screens */
+  }
+
+  .firstSection,
+  .secondSection {
+    font-size: 1.5rem;
+  }
+
+  .rightSection img {
+    max-height: 200px;
+  }
+
+  .text-gray,
+  .secondSection h1 {
+    margin-left: 5%;
+  }
+  .firstSection {
+    border: 1px solid rgb(190, 25, 25);
+    margin-top: 208px;
+  }
+  .leftSection {
+    font-size: 12px;
+    margin: 10px;
+  }
+}
