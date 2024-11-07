@@ -22,6 +22,7 @@ nav {
   padding: 0 20px; /* Adds padding for spacing on smaller screens */
   position: fixed;
   top: 0px;
+  box-shadow: 0px 5px 15px;
 }
 
 nav ul {
@@ -55,8 +56,10 @@ nav ul li a:hover {
   justify-content: space-between;
 
   font-size: 3rem;
-  margin: 110px auto;
+  margin: auto;
 
+  position: relative;
+  top: 50px;
   /* border: 1px solid white; */
 }
 
