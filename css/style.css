@@ -23,6 +23,7 @@ nav {
   position: fixed;
   top: 0px;
   box-shadow: 0px 5px 15px;
+  z-index: 99;
 }
 
 nav ul {
@@ -89,46 +90,6 @@ nav ul li a:hover {
   color: blueviolet;
 }
 
-/* Second section styling */
-.secondSection {
-  font-size: 1.9rem;
-  padding: 20px; /* Adds padding for better spacing */
-}
-
-.text-gray {
-  color: gray;
-  margin-left: 10%; /* Dynamic margin for better scaling */
-}
-
-.secondSection h1 {
-  margin-left: 10%;
-}
-
-hr {
-  margin: 0 auto;
-  width: 80%; /* Centered and responsive */
-  margin-bottom: 50px;
-}
-
-.secondSection .box {
-  background: white;
-  width: 80%;
-  height: 2px;
-  margin: 100px auto 0;
-}
-
-.secondSection .vertical {
-  height: 93px;
-  width: 1px;
-  background-color: white;
-  margin: 0 30px;
-}
-
-.box {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 /* card 3D */
 
 .card {
@@ -180,4 +141,89 @@ hr {
   100% {
     transform: rotateY(360deg);
   }
+}
+
+/* Second section styling */
+.secondSection {
+  /* border: 1px solid white; */
+  width: 80%;
+  margin: 100px auto;
+  text-align: left;
+}
+
+.text-gray {
+  color: gray;
+  margin-left: 10%; /* Dynamic margin for better scaling */
+}
+
+.secondSection h1 {
+  margin-left: 10%;
+}
+
+.box {
+  width: 100%;
+  /* border: 1px solid gray; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.secondSection .vertical {
+  height: 93px;
+  width: 1px;
+  background-color: white;
+  margin: 0 30px;
+}
+
+.smallBox {
+  width: 300px;
+  height: 450px;
+  /* border: 1px solid red; */
+  box-shadow: 0px 0px 20px 10px;
+  /* background: white; */
+}
+.tob_head {
+  width: 200px;
+  height: 100px;
+  border: 1px solid white;
+  margin: 45px auto;
+  border-radius: 15px;
+}
+
+.tob_head h6 {
+  text-align: center;
+  margin: 10px auto;
+}
+.tob_head p {
+  text-align: center;
+  margin: 8% auto;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.longline {
+  width: 51px;
+  height: 180px;
+  /* border: 1px solid rgb(170, 143, 143); */
+  position: relative;
+  top: -43px;
+  margin: auto;
+}
+.longline .fa-regular {
+  /* background-color: red; */
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+
+  top: 15px;
+  color: #8a2be2;
+}
+.content {
+  width: 99%;
+
+  /* border: 1px solid white; */
+  margin: -100px auto;
+}
+.content p {
+  font-size: 10px;
+  margin: 4px;
 }
