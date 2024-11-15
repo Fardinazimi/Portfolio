@@ -28,6 +28,12 @@
   .firstSection {
     margin-top: 100px;
   }
+  .fa-solid,
+  .fas {
+    display: none;
+    /* font-weight: 900;
+    color: red; */
+  }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1439px) {
   .card {
@@ -47,6 +53,12 @@
 
   .firstSection {
     margin-top: 80px;
+  }
+  .fa-solid,
+  .fas {
+    display: none;
+    /* font-weight: 900;
+    color: red; */
   }
 }
 
@@ -87,6 +99,12 @@
   }
   .inner_2 {
     transform: translateZ(-20px) rotateY(180deg);
+  }
+  .fa-solid,
+  .fas {
+    display: none;
+    /* font-weight: 900;
+    color: red; */
   }
 }
 
@@ -172,14 +190,32 @@
     margin: 18px auto;
     font-size: 12px;
   }
+  .fa-solid,
+  .fas {
+    font-weight: 900;
+    color: red;
+  }
   .left {
     font-size: 11px;
     margin: auto;
     font-weight: bolder;
   }
   .secondSection h1 {
-    color: red;
     font-size: 20px;
+  }
+  .text-gray,
+  .secondSection h1 {
+    margin-left: -1%;
+    font-size: 13px;
+  }
+  .tob_head p {
+    color: red;
+  }
+  .fa-solid,
+  .fas {
+    display: none;
+    /* font-weight: 900;
+    color: red; */
   }
 }
 
@@ -302,5 +338,96 @@
   }
   .longline {
     top: -24px;
+  }
+  /*  bar  */
+
+  /* .right ul {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background-color: gray;
+  
+    margin-left: -259px;
+    transition: 0.5s;
+    right: 100%;
+  }
+  .showMenu {
+    right: 0%;
+  }
+  nav ul li {
+    margin: 0px 9px;
+    font-size: 10px;
+    margin-left: 30px;
+    position: relative;
+    top: 34px;
+    left: -20px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .micon {
+    position: relative;
+    margin-left: 4px;
+ 
+  } */
+
+  .right ul {
+    display: none; /* Hide the menu by default */
+    position: absolute;
+    top: 60px; /* Adjust based on your header height */
+    width: 200px; /* Adjust width as needed */
+    background-color: gray;
+    padding: 10px 0; /* Add some padding for better spacing */
+    transition: all 0.9s ease-in-out; /* Smooth transition for appearance */
+    right: -100%; /* Position the menu off-screen initially */
+  }
+
+  .right ul.showMenu {
+    display: block; /* Show the menu when the `showMenu` class is added */
+    right: 0; /* Bring the menu into view */
+  }
+
+  nav ul li {
+    list-style: none; /* Remove default list styling */
+    margin: 10px 0; /* Add space between menu items */
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #333; /* Dark background for header */
+    color: white;
+  }
+
+  .micon {
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+    color: white;
+    font-size: 24px; /* Adjust icon size */
+  }
+
+  /* close icon */
+
+  .micon {
+    cursor: pointer;
+    /* font-size: 24px; */
+  }
+
+  .micon.closeIcon::before {
+    content: "\f00d"; /* Font Awesome 'close' icon */
+    font-family: "Font Awesome 5 Free"; /* Make sure you're using Font Awesome */
+    /* font-weight: 900; */
+  }
+
+  .micon::before {
+    content: "\f0c9"; /* Font Awesome 'bars' icon */
+    font-family: "Font Awesome 5 Free"; /* Default to hamburger menu */
+    font-weight: 900;
   }
 }
