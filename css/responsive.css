@@ -177,6 +177,10 @@
     margin: auto;
     font-weight: bolder;
   }
+  .secondSection h1 {
+    color: red;
+    font-size: 20px;
+  }
 }
 
 /* Extra small screens (0px to 426px) */
