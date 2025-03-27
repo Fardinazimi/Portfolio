@@ -1,3 +1,4 @@
+import React from "react";
 import SingleExperience from "./SingleExperience";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
@@ -55,8 +56,8 @@ const AllExperiences = () => {
     <div className="flex md:flex-row sm:flex-col items-center justify-between">
       {experiences.map((experience, index) => {
         return (
-          <>
-            <SingleExperience key={index} experience={experience} />
+          <React.Fragment key={index}>
+            <SingleExperience experience={experience} />
             {index < experiences.length - 1 && (
               <motion.div
                 variants={fadeIn("right", 0)}
@@ -67,7 +68,7 @@ const AllExperiences = () => {
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
-                  stroke-width="0"
+                  strokeWidth="0"
                   viewBox="0 0 512 512"
                   className="text-7xl text-orange lg:block sm:hidden"
                   height="1em"
@@ -78,7 +79,7 @@ const AllExperiences = () => {
                 </svg>
               </motion.div>
             )}
-          </>
+          </React.Fragment>
         );
       })}
     </div>
