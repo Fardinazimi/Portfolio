@@ -42,7 +42,8 @@ const ContactForm = () => {
       // Send auto-reply email
       const templateParams = {
         email: email,
-        name: name
+        name: name,     // Exactly matching {{name}} in template_xg7na4x
+        message: message
       };
 
       await emailjs.send(
