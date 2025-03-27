@@ -1,11 +1,18 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+// Initialize EmailJS
+emailjs.init({
+  publicKey: "ByzKZgbCe7vJaoaCb",
+});
 
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [success, setSuccess] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const handleName = (e) => {
     setName(e.target.value);
   };
@@ -16,28 +23,56 @@ const ContactForm = () => {
     setMessage(e.target.value);
   };
   const form = useRef();
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm("service_ko3hmpt", "template_ahbmmqd", form.current, {
-        publicKey: "I6HAT5mUZH7WHabGE",
-      })
-      .then(
-        () => {
-          setEmail("");
-          setName("");
-          setMessage("");
-          setSuccess("Message Sent Succesfully");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
+    setIsLoading(true);
+    toast.info("Sending your message...", { autoClose: false });
+
+    try {
+      // Send the contact form email
+      await emailjs.sendForm(
+        "service_e6jdxsp",
+        "template_fy5zf8f",
+        form.current,
+        {
+          publicKey: "ByzKZgbCe7vJaoaCb",
         }
       );
+
+      // Send auto-reply email
+      const templateParams = {
+        email: email,
+        name: name
+      };
+
+      await emailjs.send(
+        "service_e6jdxsp",
+        "template_xg7na4x",
+        templateParams
+      );
+
+      toast.dismiss();
+      toast.success("Message sent successfully!");
+      setEmail("");
+      setName("");
+      setMessage("");
+    } catch (error) {
+      console.error("Error:", error);
+      toast.dismiss();
+      toast.error("Failed to send message. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
     <div>
-      <p className="text-cyan">{success}</p>
+      <ToastContainer position="top-right" theme="dark" />
+      {isLoading && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-cyan"></div>
+        </div>
+      )}
       <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
         <input
           type="text"
@@ -70,7 +105,8 @@ const ContactForm = () => {
         />
         <button
           type="submit"
-          className="w-full rounded-lg border border-cyan text-white h-12 font-bold text-xl hover:bg-darkCyan bg-cyan transition-all duration-500"
+          className="w-full rounded-lg border border-cyan text-white h-12 font-bold text-xl hover:bg-darkCyan bg-cyan transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled={isLoading}
         >
           Send
         </button>
