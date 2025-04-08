@@ -53,35 +53,43 @@ const experiences = [
 
 const AllExperiences = () => {
   return (
-    <div className="flex md:flex-row sm:flex-col items-center justify-between">
-      {experiences.map((experience, index) => {
-        return (
-          <React.Fragment key={index}>
-            <SingleExperience experience={experience} />
-            {index < experiences.length - 1 && (
-              <motion.div
-                variants={fadeIn("right", 0)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.7 }}
-              >
-                <svg
-                  stroke="currentColor"
-                  fill="currentColor"
-                  strokeWidth="0"
-                  viewBox="0 0 512 512"
-                  className="text-7xl text-orange lg:block sm:hidden"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
+    <div className="w-full">
+      <div className="text-center mb-16 mt-6">
+        <h1 className="text-4xl font-bold text-cyan mb-4 ">
+          Professional Journey
+        </h1>
+        <p className="text-lg text-gray-400">My Career Path and Experience</p>
+      </div>
+      <div className="flex md:flex-row sm:flex-col items-center justify-between">
+        {experiences.map((experience, index) => {
+          return (
+            <React.Fragment key={index}>
+              <SingleExperience experience={experience} />
+              {index < experiences.length - 1 && (
+                <motion.div
+                  variants={fadeIn("right", 0)}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: false, amount: 0.7 }}
                 >
-                  <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path>
-                </svg>
-              </motion.div>
-            )}
-          </React.Fragment>
-        );
-      })}
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    strokeWidth="0"
+                    viewBox="0 0 512 512"
+                    className="text-7xl text-orange lg:block sm:hidden"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path>
+                  </svg>
+                </motion.div>
+              )}
+            </React.Fragment>
+          );
+        })}
+      </div>
     </div>
   );
 };
