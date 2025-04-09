@@ -23,7 +23,7 @@ const projects = [
     year: "present Project",
     align: "right",
     image: "/images/Balkhfood.png",
-    link: "#",
+    link: "https://balkh-food-express-frontend.vercel.app",
   },
   {
     name: "Bank of Luck",
