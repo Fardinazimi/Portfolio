@@ -9,14 +9,14 @@ const projects = [
     year: "November 2024",
     align: "right",
     image: "/images/World-Trivia.png",
-    link: "#",
+    link: "https://worldtriviagame.onrender.com",
   },
   {
     name: "Job Compass",
     year: "February 2024",
     align: "left",
     image: "/images/jobCompass.png",
-    link: "#",
+    link: "https://job-compass-frontend.onrender.com",
   },
   {
     name: "Balkh Food Express",
@@ -54,6 +54,7 @@ const ProjectsMain = () => {
               year={project.year}
               align={project.align}
               image={project.image}
+              link={project.link}
             />
           );
         })}
